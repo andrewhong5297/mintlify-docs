@@ -1,0 +1,26 @@
+---
+title: 'Token Prices (Beta)'
+openapi: 'GET /echo/beta/prices/evm/{address}'
+---
+
+This endpoint returns current USD prices for any ERC20 token contract address.
+
+<Note>
+As we are in beta there might be changes. Please reach out to us using [this form](https://forms.gle/8qmnUZ6ZwzRFC2VY6) if you use this API. This endpoint is authenticated with a normal Dune API key.
+</Note>
+
+# Response Fields
+
+| Field | Description | Type |
+|--------|-------------|------|
+| contract_address | The ERC20 token contract address | string |
+| prices | Array of price information across chains | array |
+
+## Price Item Fields
+
+| Field | Description | Type |
+|--------|-------------|------|
+| chain_id | ID of the blockchain | integer |
+| chain | Name of the blockchain | string |
+| price_usd | Current USD price of the token | number |
+| symbol | Token symbol | string |
